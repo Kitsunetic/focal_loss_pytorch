@@ -12,7 +12,7 @@ class FocalLoss(nn.Module):
     - https://github.com/Kitsunetic/focal_loss_pytorch
     """
 
-    def __init__(self, gamma=0.5, eps=1e-6, reduction="mean"):
+    def __init__(self, gamma=2.0, eps=1e-6, reduction="mean"):
         assert reduction in ["mean", "sum"], f"reduction should be mean or sum not {reduction}."
         super(FocalLoss, self).__init__()
 
